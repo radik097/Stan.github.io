@@ -1,6 +1,6 @@
 ---
 ---
-@import url("{{ site.theme }}");
+@import "{{ site.theme }}";
 
 :root{
   --gold:#E8AE05; --sand:#BBBBB3; --brown:#251509;

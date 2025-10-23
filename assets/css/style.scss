@@ -3,9 +3,55 @@
 @import "{{ site.theme }}";
 
 :root{
-  --gold:#E8AE05; --sand:#BBBBB3; --brown:#251509;
-  --teal:#5C8A82; --amber:#E4BA05; --dark:#2A1506;
+  /* Named palette (CSS custom properties) */
+  --harvest-gold:#E8AE05; /* gold */
+  --silver:#BBBBB3;
+  --licorice:#251509; /* brown */
+  --hookers-green:#5C8A82; /* teal */
+  --saffron:#E4BA05; /* amber */
+  --bistre:#2A1506; /* dark */
+  /* Gradients */
+  --gradient-top: linear-gradient(0deg, #E8AE05, #BBBBB3, #251509, #5C8A82, #E4BA05, #2A1506);
+  --gradient-right: linear-gradient(90deg, #E8AE05, #BBBBB3, #251509, #5C8A82, #E4BA05, #2A1506);
+  --gradient-bottom: linear-gradient(180deg, #E8AE05, #BBBBB3, #251509, #5C8A82, #E4BA05, #2A1506);
+  --gradient-left: linear-gradient(270deg, #E8AE05, #BBBBB3, #251509, #5C8A82, #E4BA05, #2A1506);
+  --gradient-top-right: linear-gradient(45deg, #E8AE05, #BBBBB3, #251509, #5C8A82, #E4BA05, #2A1506);
+  --gradient-bottom-right: linear-gradient(135deg, #E8AE05, #BBBBB3, #251509, #5C8A82, #E4BA05, #2A1506);
+  --gradient-top-left: linear-gradient(225deg, #E8AE05, #BBBBB3, #251509, #5C8A82, #E4BA05, #2A1506);
+  --gradient-bottom-left: linear-gradient(315deg, #E8AE05, #BBBBB3, #251509, #5C8A82, #E4BA05, #2A1506);
+  --gradient-radial: radial-gradient(#E8AE05, #BBBBB3, #251509, #5C8A82, #E4BA05, #2A1506);
 }
+
+:root{
+  /* existing alias variables used across the site */
+  --gold: var(--harvest-gold);
+  --sand: var(--silver);
+  --brown: var(--licorice);
+  --teal: var(--hookers-green);
+  --amber: var(--saffron);
+  --dark: var(--bistre);
+}
+
+/* SCSS palette (for authoring convenience) */
+$harvest-gold: #E8AE05;
+$silver: #BBBBB3;
+$licorice: #251509;
+$hookers-green: #5C8A82;
+$saffron: #E4BA05;
+$bistre: #2A1506;
+
+/* SCSS gradient helpers */
+$gradient-top: linear-gradient(0deg, $harvest-gold, $silver, $licorice, $hookers-green, $saffron, $bistre);
+$gradient-right: linear-gradient(90deg, $harvest-gold, $silver, $licorice, $hookers-green, $saffron, $bistre);
+$gradient-bottom: linear-gradient(180deg, $harvest-gold, $silver, $licorice, $hookers-green, $saffron, $bistre);
+$gradient-left: linear-gradient(270deg, $harvest-gold, $silver, $licorice, $hookers-green, $saffron, $bistre);
+$gradient-top-right: linear-gradient(45deg, $harvest-gold, $silver, $licorice, $hookers-green, $saffron, $bistre);
+$gradient-bottom-right: linear-gradient(135deg, $harvest-gold, $silver, $licorice, $hookers-green, $saffron, $bistre);
+$gradient-top-left: linear-gradient(225deg, $harvest-gold, $silver, $licorice, $hookers-green, $saffron, $bistre);
+$gradient-bottom-left: linear-gradient(315deg, $harvest-gold, $silver, $licorice, $hookers-green, $saffron, $bistre);
+$gradient-radial: radial-gradient($harvest-gold, $silver, $licorice, $hookers-green, $saffron, $bistre);
+/* Backward compatibility: keep explicit values for non-variable-friendly tools */
+:root{ --gold:#E8AE05; --sand:#BBBBB3; --brown:#251509; --teal:#5C8A82; --amber:#E4BA05; --dark:#2A1506; }
 /* фон и палитра */
 body{
   color:var(--brown);

@@ -1,0 +1,32 @@
+---
+---
+@import url("{{ site.theme }}");
+
+:root{
+  --gold:#E8AE05; --sand:#BBBBB3; --brown:#251509;
+  --teal:#5C8A82; --amber:#E4BA05; --dark:#2A1506;
+}
+/* фон и палитра */
+body{
+  color:var(--brown);
+  background: var(--sand) url('https://www.transparenttextures.com/patterns/wood-pattern.png') fixed;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+.section-title{ border-left:6px solid var(--amber); padding-left:.7rem; }
+
+/* Helpers from the landing page */
+.angled-top{position:relative}
+.angled-top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:70px;background:linear-gradient( to bottom right, transparent 49%, var(--sand) 50%);}    
+.hero{background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--dark)}
+.hero .badge{background:rgba(0,0,0,.08);color:var(--dark)}
+.btn-cta{background:var(--dark);color:#fff;border:0}
+.btn-cta:hover{background:#1b0e05;color:#fff}
+.card-feature{border:0;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.wood-chip{background:repeating-linear-gradient( 135deg, rgba(37,21,9,.12) 0 6px, rgba(37,21,9,.06) 6px 12px );clip-path:polygon(0 0,100% 0,95% 100%,0 90%)}
+.sticky-call{position:fixed;right:16px;bottom:16px;z-index:1030}
+.brand{font-weight:700}
+.gallery img{border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+footer{background:var(--dark)}
+.logo-round{width:56px;height:56px;border-radius:50%;background:#fff;color:var(--dark);display:grid;place-items:center;font-size:28px;font-weight:800}
+.nav-link{font-weight:600}
+@media (min-width:992px){.hero .display-5{font-size:3rem}}

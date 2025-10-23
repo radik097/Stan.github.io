@@ -72,10 +72,17 @@ body{
 .sticky-call{position:fixed;right:16px;bottom:16px;z-index:1030}
 .brand{font-weight:700}
 .gallery img{border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+img{max-width:100%;height:auto}
 footer{background:var(--dark)}
 .logo-round{width:56px;height:56px;border-radius:50%;background:#fff;color:var(--dark);display:grid;place-items:center;font-size:28px;font-weight:800}
 .nav-link{font-weight:600}
 @media (min-width:992px){.hero .display-5{font-size:3rem}}
+
+/* Mobile-only sticky call with safe-area */
+.sticky-call{bottom:calc(16px + env(safe-area-inset-bottom));}
+@media (min-width: 992px){
+  .sticky-call{display:none}
+}
 
 /* Theme variants */
 [data-bs-theme='light']{

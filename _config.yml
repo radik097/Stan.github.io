@@ -1,0 +1,16 @@
+# Jekyll Configuration for GitHub Pages
+title: Your Mate Handyman
+description: Professional handyman services in Hallam, Victoria
+baseurl: ""
+url: "https://radik097.github.io"
+
+# Build settings
+markdown: kramdown
+theme: null
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE

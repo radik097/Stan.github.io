@@ -30,3 +30,13 @@ footer{background:var(--dark)}
 .logo-round{width:56px;height:56px;border-radius:50%;background:#fff;color:var(--dark);display:grid;place-items:center;font-size:28px;font-weight:800}
 .nav-link{font-weight:600}
 @media (min-width:992px){.hero .display-5{font-size:3rem}}
+
+/* Theme variants */
+[data-bs-theme='light']{
+  --bs-body-bg: var(--sand);
+  --bs-body-color: var(--brown);
+}
+[data-bs-theme='dark']{
+  --bs-body-bg: #1c120a;
+  --bs-body-color: #f5efe9;
+}

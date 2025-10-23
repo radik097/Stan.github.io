@@ -1,0 +1,38 @@
+name: Fetch Images Cache
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'   # Every Monday 06:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up PowerShell
+        uses: PowerShell/PowerShell@v1
+        with:
+          architecture: x64
+
+      - name: Download images
+        shell: pwsh
+        run: |
+          ./scripts/fetch-images.ps1
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore(images): refresh cached images"
+            git push
+          fi

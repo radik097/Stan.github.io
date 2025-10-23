@@ -1,0 +1,28 @@
+# Minimal Jekyll config for GitHub Pages
+# Docs: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll
+
+# Site settings
+title: "Your Mate Handyman — Hallam, VIC"
+description: "Reliable • Friendly • Local handyman services in South East Melbourne. Call 0451 615 231."
+url: "https://radik097.github.io"   # main site URL (no trailing slash)
+baseurl: "/Stan"                   # repo name for project pages (with leading slash)
+lang: en
+timezone: Australia/Melbourne
+
+# Build settings
+permalink: pretty
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Plugins allowed by GitHub Pages
+plugins:
+  - jekyll-sitemap
+
+# Exclude files/folders from build
+exclude:
+  - README.md
+  - LICENSE
+
+# Optional: GitHub Pages theme disabled since we use custom HTML
+theme: null

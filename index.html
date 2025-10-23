@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Mate Handyman — Hallam, VIC</title>
+
+  <!-- External styles/libs only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Minimal custom theming (palette + layout helpers) -->
+  <style>
+    :root{
+      --gold:#E8AE05;--sand:#BBBBB3;--brown:#251509;--teal:#5C8A82;--amber:#E4BA05;--dark:#2A1506;
+      /* map to Bootstrap tokens */
+      --bs-primary:var(--gold);--bs-secondary:var(--teal);--bs-dark:var(--dark);--bs-warning:var(--amber);
+      --bs-body-bg:var(--sand);--bs-body-color:var(--brown);
+    }
+    body{font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background-image:url('https://www.transparenttextures.com/patterns/wood-pattern.png'); background-attachment:fixed}
+    .angled-top{position:relative}
+    .angled-top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:70px;background:linear-gradient( to bottom right, transparent 49%, var(--sand) 50%);}    
+    .hero{background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--dark)}
+    .hero .badge{background:rgba(0,0,0,.08);color:var(--dark)}
+    .btn-cta{background:var(--dark);color:#fff;border:0}
+    .btn-cta:hover{background:#1b0e05;color:#fff}
+    .card-feature{border:0;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+    .wood-chip{background:repeating-linear-gradient( 135deg, rgba(37,21,9,.12) 0 6px, rgba(37,21,9,.06) 6px 12px );clip-path:polygon(0 0,100% 0,95% 100%,0 90%)}
+    .section-title{border-left:6px solid var(--amber);padding-left:.7rem}
+    .sticky-call{position:fixed;right:16px;bottom:16px;z-index:1030}
+    .brand{font-weight:700}
+    .gallery img{border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+    footer{background:var(--dark)}
+    .logo-round{width:56px;height:56px;border-radius:50%;background:#fff;color:var(--dark);display:grid;place-items:center;font-size:28px;font-weight:800}
+    .nav-link{font-weight:600}
+    @media (min-width:992px){.hero .display-5{font-size:3rem}}
+  </style>
+
+  <!-- SEO / OG -->
+  <meta name="description" content="Your Mate Handyman — Reliable • Friendly • Local. Home repairs, furniture assembly, bathroom jobs, shelves. Hallam, South East Melbourne. Call 0451 615 231." />
+  <meta property="og:title" content="Your Mate Handyman — Hallam, VIC" />
+  <meta property="og:description" content="Reliable • Friendly • Local handyman services in South East Melbourne." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://radik097.github.io/Stan/" />
+  <meta name="theme-color" content="#E8AE05" />
+
+  <!-- Jekyll/GitHub Pages friendliness -->
+  <meta name="generator" content="GitHub Pages" />
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <span class="logo-round" aria-hidden="true">🔧</span>
+        <span class="brand">Your Mate Handyman</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero angled-top py-5">
+    <div class="container py-4" data-aos="fade-up">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="badge rounded-pill me-2">Reliable</span>
+          <span class="badge rounded-pill me-2">Friendly</span>
+          <span class="badge rounded-pill">Local</span>
+          <h1 class="display-5 fw-bold mt-3">Your Mate Handyman</h1>
+          <p class="lead mb-4">Hi, I’m Stan. Home improvement and repairs across South East Melbourne. Honest pricing, quick response, quality work.</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-cta btn-lg" href="tel:0451615231"><i class="fa-solid fa-phone"></i> Call 0451 615 231</a>
+            <a class="btn btn-outline-dark btn-lg" href="#contact"><i class="fa-solid fa-envelope"></i> Get a quote</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div id="heroCarousel" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- 6 photos -->
+              <div class="carousel-item active"><img class="d-block w-100" alt="Handyman work 1" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/559094588_122098734261065833_1324753359694332935_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nfU2BhrkX24Q7kNvwH0IAsK&_nc_oc=AdmwWzfW7067scgjbNdmEykcEB47clkPxP9yXkoh8BVc7_3xvl149OhldxBtNXTslI4&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=hXrVWQasW3hDJVhk91KVfg&oh=00_Afd6EfSa7iS7l9vFfAmvjjlO0scUpGcv1MBClcL9Lze2PQ&oe=68FF8DD8"></div>
+              <div class="carousel-item"><img class="d-block w-100" alt="Handyman work 2" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/561046004_122098734273065833_6426587242540028962_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Au0Key9l96kQ7kNvwFwoE8t&_nc_oc=AdkrDAj18Ix-2UR-Y9_lfsWq7saK6O9iOt85_PEo_HC7vij25b1NAu0s970E8B7P5Zc&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=2iRu-mQ5KOCzZcnKxFGxNQ&oh=00_AffPhB2k3BXBHljeykp9KJLf_sinJfEcpVKuoT0x7tUBwA&oe=68FF6236"></div>
+              <div class="carousel-item"><img class="d-block w-100" alt="Handyman work 3" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/559020913_122097118239065833_3233818107632234695_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=MVorAZ6ot4YQ7kNvwG4a523&_nc_oc=AdklDTqAQ1K66YWjYRUDRnFKQbfUFYYrCixyZEW4o9PooZNcwroBhZZYbu_nTwrjgJg&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=-RJyY1U9-MCuUzPhCaplvQ&oh=00_Afcm6M0o97HX7v_aas0DBk7SuT4nNPUk4Ada02_3QInCxg&oe=68FF7EBA"></div>
+              <div class="carousel-item"><img class="d-block w-100" alt="Handyman work 4" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t51.82787-15/560358525_17844334287589747_1867315546270757240_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zSphBn7ZvToQ7kNvwHkkDZ5&_nc_oc=AdlVgiqvrDAT3zQsUeKr6iYmKa6KRuIf9WoWlmH4805QIFc_Vu5jxMpyoPZ7bnM5Q9M&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=ycmk_uOkaL-uouK2ieZ8mg&oh=00_AfcaDFZeRXbU4p2Md7YJE_tiG0DaQ4lMGqhy0HIDal6qGg&oe=68FF6F8D"></div>
+              <div class="carousel-item"><img class="d-block w-100" alt="Handyman work 5" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/558954300_122095086375065833_8434583287107771559_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=D0ALmsuRrTgQ7kNvwH3ukQe&_nc_oc=AdleYESjcbTjp9cVE1s_X7zTx0zahMVhrwHJOIChGzpI5Gnkv9r13f3zOryU53DOrWc&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=xmUpz7ggb7OJa64LeAB7-w&oh=00_AfetX-g0B4ek13FoIe_xvaYnqlqd3VrOV1KKLtMuxFeOmg&oe=68FF7E97"></div>
+              <div class="carousel-item"><img class="d-block w-100" alt="Handyman work 6" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/558356922_122095017411065833_18280156597737695_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=-1h0OVrrqZAQ7kNvwHnGUJk&_nc_oc=AdkFCTnUOktGViNyH-y2JVgPKprNdffc9J-Q-4ntGkvPst0x73UHiaelpatexSFAPcI&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=oy1ff0AKgOD8p5vUGZuwgg&oh=00_AfcOcxs02JnTwo4JXB0IT0FUpNa1UiiRx4iS282lrLE5Tg&oe=68FF74FF"></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous"><span class="carousel-control-prev-icon"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next"><span class="carousel-control-next-icon"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title fw-bold mb-4">Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card card-feature h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fa-solid fa-screwdriver-wrench text-primary me-2"></i>General Repairs</h5>
+              <p class="card-text">Doors, locks, patching, caulking, wall mounts, minor fixes around the house.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-feature h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fa-solid fa-couch text-primary me-2"></i>Furniture</h5>
+              <p class="card-text">Assembly and repair for flat‑packs, cabinets, shelves, and custom installs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-feature h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fa-solid fa-shower text-primary me-2"></i>Bathroom Jobs</h5>
+              <p class="card-text">Minor plumbing-related tasks, silicone reseal, fixtures, towel rails, mirrors.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-feature h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fa-solid fa-shelf-books text-primary me-2"></i>Shelves & Mounting</h5>
+              <p class="card-text">Floating shelves, TV mounting, picture hanging with proper anchors.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-feature h-100 wood-chip">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fa-solid fa-house-chimney text-primary me-2"></i>Home Maintenance</h5>
+              <p class="card-text">Weather seals, small paint touch‑ups, outdoor fixes, and seasonal upkeep.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-feature h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fa-solid fa-clipboard-check text-primary me-2"></i>Small Projects</h5>
+              <p class="card-text">Have something specific? Describe the task and get an honest quote.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 text-muted"><small>Not yet rated (0 reviews)</small></div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-5 bg-body-tertiary">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title fw-bold mb-4">Recent Work</h2>
+      <div class="row g-3 gallery">
+        <div class="col-6 col-lg-4"><img class="img-fluid" alt="Work 1" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/559094588_122098734261065833_1324753359694332935_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nfU2BhrkX24Q7kNvwH0IAsK&_nc_oc=AdmwWzfW7067scgjbNdmEykcEB47clkPxP9yXkoh8BVc7_3xvl149OhldxBtNXTslI4&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=hXrVWQasW3hDJVhk91KVfg&oh=00_Afd6EfSa7iS7l9vFfAmvjjlO0scUpGcv1MBClcL9Lze2PQ&oe=68FF8DD8"></div>
+        <div class="col-6 col-lg-4"><img class="img-fluid" alt="Work 2" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/561046004_122098734273065833_6426587242540028962_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Au0Key9l96kQ7kNvwFwoE8t&_nc_oc=AdkrDAj18Ix-2UR-Y9_lfsWq7saK6O9iOt85_PEo_HC7vij25b1NAu0s970E8B7P5Zc&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=2iRu-mQ5KOCzZcnKxFGxNQ&oh=00_AffPhB2k3BXBHljeykp9KJLf_sinJfEcpVKuoT0x7tUBwA&oe=68FF6236"></div>
+        <div class="col-6 col-lg-4"><img class="img-fluid" alt="Work 3" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/559020913_122097118239065833_3233818107632234695_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=MVorAZ6ot4YQ7kNvwG4a523&_nc_oc=AdklDTqAQ1K66YWjYRUDRnFKQbfUFYYrCixyZEW4o9PooZNcwroBhZZYbu_nTwrjgJg&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=-RJyY1U9-MCuUzPhCaplvQ&oh=00_Afcm6M0o97HX7v_aas0DBk7SuT4nNPUk4Ada02_3QInCxg&oe=68FF7EBA"></div>
+        <div class="col-6 col-lg-4"><img class="img-fluid" alt="Work 4" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t51.82787-15/560358525_17844334287589747_1867315546270757240_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zSphBn7ZvToQ7kNvwHkkDZ5&_nc_oc=AdlVgiqvrDAT3zQsUeKr6iYmKa6KRuIf9WoWlmH4805QIFc_Vu5jxMpyoPZ7bnM5Q9M&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=ycmk_uOkaL-uouK2ieZ8mg&oh=00_AfcaDFZeRXbU4p2Md7YJE_tiG0DaQ4lMGqhy0HIDal6qGg&oe=68FF6F8D"></div>
+        <div class="col-6 col-lg-4"><img class="img-fluid" alt="Work 5" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/558954300_122095086375065833_8434583287107771559_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=D0ALmsuRrTgQ7kNvwH3ukQe&_nc_oc=AdleYESjcbTjp9cVE1s_X7zTx0zahMVhrwHJOIChGzpI5Gnkv9r13f3zOryU53DOrWc&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=xmUpz7ggb7OJa64LeAB7-w&oh=00_AfetX-g0B4ek13FoIe_xvaYnqlqd3VrOV1KKLtMuxFeOmg&oe=68FF7E97"></div>
+        <div class="col-6 col-lg-4"><img class="img-fluid" alt="Work 6" src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/558356922_122095017411065833_18280156597737695_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=-1h0OVrrqZAQ7kNvwHnGUJk&_nc_oc=AdkFCTnUOktGViNyH-y2JVgPKprNdffc9J-Q-4ntGkvPst0x73UHiaelpatexSFAPcI&_nc_zt=23&_nc_ht=scontent.fmel18-1.fna&_nc_gid=oy1ff0AKgOD8p5vUGZuwgg&oh=00_AfcOcxs02JnTwo4JXB0IT0FUpNa1UiiRx4iS282lrLE5Tg&oe=68FF74FF"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title fw-bold mb-4">About</h2>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-7">
+          <p>Stan is your local handyman in Hallam, VIC. Servicing South East Melbourne suburbs with honest pricing, quick response, and quality workmanship.</p>
+          <ul class="list-unstyled mb-0">
+            <li>✅ Honest pricing</li>
+            <li>✅ Quick response</li>
+            <li>✅ Quality work</li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <div class="p-4 rounded-4 wood-chip">
+            <p class="mb-1 fw-semibold">Service area</p>
+            <p class="mb-0 text-muted small">Hallam, Dandenong, Narre Warren, Berwick, Hampton Park, Endeavour Hills and nearby suburbs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 bg-body-tertiary">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title fw-bold mb-4">Contact</h2>
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="p-4 rounded-4 bg-white shadow-sm">
+            <h5 class="mb-3">Your Mate Handyman</h5>
+            <p class="mb-1">Hallam, VIC, Australia</p>
+            <p class="mb-3"><span class="badge text-bg-secondary">Always open</span></p>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-primary" href="tel:0451615231"><i class="fa-solid fa-phone"></i> Call</a>
+              <a class="btn btn-outline-dark" href="sms:+61451615231"><i class="fa-solid fa-comment-dots"></i> SMS</a>
+              <a class="btn btn-outline-dark" href="mailto:mufa4ka@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+              <a class="btn btn-outline-dark" href="https://wa.me/61451615231" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <button class="btn btn-dark" id="vcf"><i class="fa-regular fa-address-card"></i> Add to contacts</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="p-4 rounded-4 wood-chip">
+            <p class="mb-1 fw-semibold">Facebook</p>
+            <a class="link-dark" href="https://www.facebook.com/profile.php?id=61581974998143" target="_blank" rel="noopener">facebook.com/YourMateHandyman</a>
+            <hr />
+            <p class="mb-1 fw-semibold">Email</p>
+            <a class="link-dark" href="mailto:mufa4ka@gmail.com">mufa4ka@gmail.com</a>
+            <p class="mb-1 fw-semibold mt-3">Phone</p>
+            <a class="link-dark" href="tel:+61451615231">+61 451 615 231</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a class="sticky-call btn btn-primary btn-lg rounded-pill shadow" href="tel:0451615231" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+
+  <footer class="text-light py-4 mt-5">
+    <div class="container text-center">
+      <div class="mb-2 small">© 2025 Your Mate Handyman • Hallam, VIC</div>
+      <div class="small">Reliable • Friendly • Local</div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD for LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Your Mate Handyman",
+    "description": "Reliable • Friendly • Local handyman services in South East Melbourne.",
+    "telephone": "+61 451 615 231",
+    "email": "mufa4ka@gmail.com",
+    "address": {"@type": "PostalAddress", "addressLocality": "Hallam", "addressRegion": "VIC", "addressCountry": "AU"},
+    "areaServed": "South East Melbourne",
+    "url": "https://radik097.github.io/Stan/"
+  }
+  </script>
+
+  <!-- External JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({duration:700});</script>
+  <script>
+    // vCard download
+    document.addEventListener('DOMContentLoaded', function(){
+      const btn = document.getElementById('vcf');
+      if(!btn) return;
+      btn.addEventListener('click', function(){
+        const vcf = `BEGIN:VCARD\nVERSION:3.0\nN:;Stan;;;\nFN:Stan - Your Mate Handyman\nORG:Your Mate Handyman\nTITLE:Handyman\nTEL;TYPE=CELL:+61451615231\nEMAIL:mufa4ka@gmail.com\nADR;TYPE=WORK:;;Hallam;;;Australia\nURL:https://radik097.github.io/Stan/\nEND:VCARD`;
+        const blob = new Blob([vcf], {type:'text/vcard'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'your-mate-handyman.vcf';
+        document.body.appendChild(a); a.click(); a.remove();
+        URL.revokeObjectURL(url);
+      });
+    });
+  </script>
+</body>
+</html>
